@@ -5,16 +5,7 @@ environment {
   course = "Jenkins"
 }
 stages {
-  stage('checkout') {
-    steps {
-     git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
-     echo "code checkout is complete in stage ${stageVariable} by user ${name}"
-    }
 
-    environment {
-      stageVariable = "checkout"
-    }
-  }
 
   stage('compile and package') {
     steps {
